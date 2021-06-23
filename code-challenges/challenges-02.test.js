@@ -7,7 +7,7 @@ CHALLENGE 1 - Review
 Write a function named raisedToTheThird that takes in an array of numbers and returns a new array of each of those numbers raised to the 3rd power (hint: look up Math.pow()). Use forEach to solve this problem.
 
 ------------------------------------------------------------------------------------------------ */
-Math.pow(7, 2);    // 49
+  // 49
 
 const raisedToTheThird = (arr) => {
   let localArray = [];
@@ -24,12 +24,11 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
+ let localArray = arr.map(element => {
+     return element +1;
+}); return localArray
+};
 
- arr.map(element => {
-    return element;
-});
-
-}; 
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -38,7 +37,9 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 ------------------------------------------------------------------------------------------------ */
 
 const addQuestion = (arr) => {
-  // Solution code here...
+  let localArray = arr.map(element => {
+    return element+'?';
+  }); return localArray
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -50,24 +51,12 @@ You may choose to complete this challenge using a for loop, for...in syntax, or 
 
 For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and 2 ^ 3 = 8.
 ------------------------------------------------------------------------------------------------ */
-
-
-const greeting = (word) => {
-  let greetword = word.toUpperCase()+"!";
-  
-  return greetword;
-};
-
-const speaker = (words, callback) => {
-  let localArray = [];
-  words.forEach(string => {
-    localArray.push(callback(string));
-  });
-   return localArray
-
+// Math.pow(number, 2)
 const forLoopTwoToThe = (arr) => {
-  // Solution code here...
-
+  let localArray = [];
+  for(let i=0; i<arr.length; i++) {
+    localArray.push(Math.pow(2, arr[i]))
+  } return localArray
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -77,7 +66,10 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
-  // Solution code here...
+  let localArray = [];
+  arr.forEach(number => {
+    localArray.push(Math.pow(2, number))
+  }); return localArray
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -87,7 +79,9 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  // Solution code here...
+let localArray = arr.map(element => {
+  return Math.pow(2, element)
+}); return localArray
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -129,15 +123,6 @@ Note: Because this function is expecting the array of abilities, it will be invo
 extractAbilities(snorlaxAbilities.abilities)
 ------------------------------------------------------------------------------------------------ */
 
-const createList = (availableItems) => {
-  
-  let localArray = [];
-  availableItems.forEach(instock => {
-    if(instock.available === true) {
-      localArray.push(instock.name)
-    }
-  }) return localArray
-
 const snorlaxAbilities = {
   abilities: [
     {
@@ -171,7 +156,6 @@ const snorlaxAbilities = {
 
 const extractAbilities = (arr) => {
   // Solution code here...
-
 };
 
 /* ------------------------------------------------------------------------------------------------
