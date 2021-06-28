@@ -21,9 +21,15 @@ For example:
 
 Returns: ['dyoll', 'eimaj'];
 ------------------------------------------------------------------------------------------------ */
-
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
 const getNames = (arr) => {
-  // Solution code here...
+  let newarray=[];
+   arr.map(str => {
+  newarray.push(reverseString(str.name))
+}); return newarray
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -34,7 +40,7 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 ------------------------------------------------------------------------------------------------ */
 
 const appendTheEnd = (str) => {
-  // Solution code here...
+  return str+' The end.'
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,7 +57,7 @@ console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
 const appendFirstToLast = (arr) => {
-  // Solution code here...
+  arr.push(arr[0])
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -70,7 +76,7 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 ------------------------------------------------------------------------------------------------ */
 
 const addBirthYearProperty = (obj, year) => {
-  // Solution code here...
+  obj.yearBorn = year
 };
 
 /* ------------------------------------------------------------------------------------------------
